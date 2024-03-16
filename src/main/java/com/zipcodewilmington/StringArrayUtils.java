@@ -41,12 +41,21 @@ public class StringArrayUtils {
     }
 
     /**
-     * @param array array of String objects
+     * @param array array of String object
      * @param value value to check array for
      * @return true if the array contains the specified `value`
      */ // TODO
     public static boolean contains(String[] array, String value) {
-        return false;
+      //  StringBuilder word = new StringBuilder();
+        boolean result = false;
+          for(int i = 0; i < array.length; i++) {
+            if(array[i].equals(value)) {
+                result = true;
+            }
+        }
+
+        return result;
+
     }
 
     /**
