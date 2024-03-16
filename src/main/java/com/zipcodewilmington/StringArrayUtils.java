@@ -20,6 +20,7 @@ public class StringArrayUtils {
      * @return second element in specified array
      */
     public static String getSecondElement(String[] array) {
+
         return array[1];
     }
 
@@ -37,6 +38,7 @@ public class StringArrayUtils {
      * @return second to last element in specified array
      */ // TODO
     public static String getSecondToLastElement(String[] array) {
+
         return array[array.length - 2];
     }
 
@@ -46,7 +48,9 @@ public class StringArrayUtils {
      * @return true if the array contains the specified `value`
      */ // TODO
     public static boolean contains(String[] array, String value) {
-      //  StringBuilder word = new StringBuilder();
+      //  String[] == {"word1", "word2", "word3",}; vs String = "word";
+      // we check the index of the array which contains the whole word to see if it equals the value/ word argument
+      // in a String literal, contains checks through the letters of the word to see if characters are in the word
         boolean result = false;
           for(int i = 0; i < array.length; i++) {
             if(array[i].equals(value)) {
